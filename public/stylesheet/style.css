@@ -1,0 +1,26 @@
+.registerform{
+    background-color: red;
+    margin-top: 200px;
+    margin-left: 550px;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    padding-top: 80px;
+    border-radius: 20px;
+}
+
+.loginform{
+    background-color: red;
+    margin-top: 200px;
+    margin-left: 550px;
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    padding-top: 80px;
+    border-radius: 20px;
+}
+
+.inp{
+    line-height: 30px;
+    font-size: 20px;
+}
