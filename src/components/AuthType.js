@@ -19,10 +19,11 @@ class AuthType extends React.Component{
 
     render(){
         return(
-            <diV>
+            <diV className="selector">
                 <form>
-                    <label><input type="radio" name="loginSelect" value="login" onChange={this.handleChange}></input>Login</label>
-                    <label><input type="radio" name="loginSelect" value="register" onChange={this.handleChange}></input>Register</label>
+                    <label className={this.state.loginSelect=="login"?"type1":"type"}>
+                        <input type="radio" name="loginSelect" value="login" onChange={this.handleChange}></input>Login</label>
+                    <label className={this.state.loginSelect=="login"?"type":"type2"}><input type="radio" name="loginSelect" value="register" onChange={this.handleChange}></input>Register</label>
                     {this.state.loginSelect=="login"?<LoginPage/>:<RegisterPage/>}
                 </form>
             </diV>

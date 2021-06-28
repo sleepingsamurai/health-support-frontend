@@ -7,9 +7,10 @@ class LoginPage extends React.Component{
             <div>
                 <div className="loginform"> 
                     <form>
-                        <input className="inp" type="text" placeholder="username"></input><br/><br/>
-                        <input className="inp" type="text" placeholder="password"></input><br/><br/>
-                        <input type="submit"></input>
+                        <h4 className="heading">Login</h4>
+                        <input className="inp" type="text" placeholder="Username"></input><br/><br/>
+                        <input className="inp" type="text" placeholder="Password"></input><br/><br/>
+                        <input type="submit" className="btn btn-dark"></input>
                     </form>
                 </div>
             </div>

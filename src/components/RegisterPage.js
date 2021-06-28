@@ -8,11 +8,12 @@ class RegisterPage extends React.Component{
             <div>
                 <div className="registerform"> 
                     <form>
-                        <input className="inp" type="text" placeholder="username"></input><br/><br/>
-                        <input className="inp" type="text" placeholder="email"></input><br/><br/>
-                        <input className="inp" type="text" placeholder="password1"></input><br/><br/>
-                        <input className="inp" type="text" placeholder="password2"></input><br/><br/>
-                        <input type="submit"></input>
+                        <h4 className="heading">Register</h4>
+                        <input className="inp" type="text" placeholder="Username"></input><br/><br/>
+                        <input className="inp" type="text" placeholder="E-mail"></input><br/><br/>
+                        <input className="inp" type="text" placeholder="Password"></input><br/><br/>
+                        <input className="inp" type="text" placeholder="Confirm Password"></input><br/><br/>
+                        <input type="submit" className="btn btn-dark"></input>
                     </form>
                 </div>
             </div>
