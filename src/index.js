@@ -3,10 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Route, BrowserRouter} from 'react-router-dom'
+import AuthType from './components/AuthType';
+
+
+function Router(){
+  return(
+    <BrowserRouter>
+
+      <Route exact path = "/" component={AuthType}/>
+      <Route exact path = "/dashboard" component={App}/>
+
+    </BrowserRouter>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 );
