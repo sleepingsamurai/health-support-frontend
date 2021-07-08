@@ -9,7 +9,7 @@ class Sidebar extends React.Component{
         const sidebarItemComponent = SidebarData.map(
             function(item){
                 return(
-                    <SidebarItem key={item.id} title={item.title} icon={item.icon} />
+                    <SidebarItem key={item.id} title={item.title} icon={item.icon} link={item.link} />
                 )
             }
         )

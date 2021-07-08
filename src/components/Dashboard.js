@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import Sidebar from "./Sidebar";
 import InfoCards from "./InfoCards"
 
-class DashboardUser extends React.Component{
+class Dashboard extends React.Component{
     render(){
         return(
             <div className="row">
@@ -18,4 +18,4 @@ class DashboardUser extends React.Component{
     }
 }
 
-export default DashboardUser;
+export default Dashboard;

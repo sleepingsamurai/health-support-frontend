@@ -11,30 +11,36 @@ export const SidebarData = [
         id: 1,
         title: "Home",
         icon: <HomeIcon />,
+        link: "/dashboard",
     },
     {
         id: 2,
         title: "Vaccine",
         icon: <ColorizeIcon />,
+        link: "/vaccine",
     },
     {
         id: 3,
         title: "Beds",
         icon: <AirlineSeatFlatIcon />,
+        link: "/dashboard",
     },
     {
         id: 4,
         title: "Oxygen Cylinders",
         icon: <HourglassEmptyIcon />,
+        link: "/dashboard",
     },
     {
         id: 5,
         title: "Hospitals",
         icon: <LocalHospitalIcon />,
+        link: "/hospital",
     },
     {
         id: 6,
         title: "Logout",
         icon: <ExitToAppIcon />,
+        link: "/dashboard",
     }
 ]

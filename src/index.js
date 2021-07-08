@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Route, BrowserRouter} from 'react-router-dom'
 import AuthType from './components/AuthType';
+import Dashboard from './components/Dashboard'
+import Hospital from './components/Hospital';
+import Vaccine from './components/Vaccine';
 
 
 function Router(){
@@ -12,7 +15,9 @@ function Router(){
     <BrowserRouter>
 
       <Route exact path = "/" component={AuthType}/>
-      <Route exact path = "/dashboard" component={App}/>
+      <Route exact path = "/dashboard" component={Dashboard}/>
+      <Route exact path = "/hospital" component={Hospital}/>
+      <Route exact path = "/vaccine" component={Vaccine}/>
 
     </BrowserRouter>
   )

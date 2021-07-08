@@ -7,7 +7,6 @@ import { addRSAMissing } from "sshpk";
  
     return(
         <div>
-          <Dashboard />
         </div>
     )
   }
