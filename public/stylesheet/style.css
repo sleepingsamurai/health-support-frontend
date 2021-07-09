@@ -83,7 +83,7 @@ body{
     opacity: 0;
 }
 
-.heading{
+.headingauth{
     margin-top: -50px;
     margin-bottom: 20px;
 }
@@ -200,5 +200,7 @@ body{
     margin-top: 20px;
     border-radius: 20px;
 }
+
+
 
 

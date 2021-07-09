@@ -23,13 +23,13 @@ export const SidebarData = [
         id: 3,
         title: "Beds",
         icon: <AirlineSeatFlatIcon />,
-        link: "/dashboard",
+        link: "/bed",
     },
     {
         id: 4,
         title: "Oxygen Cylinders",
         icon: <HourglassEmptyIcon />,
-        link: "/dashboard",
+        link: "/oxygen",
     },
     {
         id: 5,

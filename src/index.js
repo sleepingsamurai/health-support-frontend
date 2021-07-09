@@ -8,18 +8,25 @@ import AuthType from './components/AuthType';
 import Dashboard from './components/Dashboard'
 import Hospital from './components/Hospital';
 import Vaccine from './components/Vaccine';
+import Bed from './components/Bed'
+import OxygenCylinder from './components/OxygenCylinder'
+import {CookiesProvider} from 'react-cookie'
 
 
 function Router(){
   return(
-    <BrowserRouter>
+    <CookiesProvider>
+        <BrowserRouter>
 
-      <Route exact path = "/" component={AuthType}/>
-      <Route exact path = "/dashboard" component={Dashboard}/>
-      <Route exact path = "/hospital" component={Hospital}/>
-      <Route exact path = "/vaccine" component={Vaccine}/>
+          <Route exact path = "/" component={AuthType}/>
+          <Route exact path = "/dashboard" component={Dashboard}/>
+          <Route exact path = "/hospital" component={Hospital}/>
+          <Route exact path = "/vaccine" component={Vaccine}/>
+          <Route exact path = "/bed" component={Bed}/>
+          <Route exact path = "/oxygen" component={OxygenCylinder}/>
 
-    </BrowserRouter>
+        </BrowserRouter>
+    </CookiesProvider>
   )
 }
 
