@@ -1,18 +1,20 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import {useState, useEffect} from "react"
+import {useCookies} from 'react-cookie'
 
 function Cards(props){
 
     var [count, setcount] = useState(0)
     const [arr , setarr] = useState([])
+    const [token, settoken] =useCookies(['mytoken'])
 
     useEffect(() => {
         fetch(`http://127.0.0.1:8000/api/vaccine-slot/${props.type.id}/`,{
             'method' : 'GET',
             headers : {
                 'Content-Type' : 'application/json',
-                'Authorization' : 'Token 3d12146fd1fcd94ccdd96f2b13ddcb3c4bbfb49f'
+                'Authorization' : `Token ${token['mytoken']}`
             }
         }).then(response => response.json())
         .then(response => setarr(response))

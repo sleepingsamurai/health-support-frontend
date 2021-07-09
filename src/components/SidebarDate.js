@@ -41,6 +41,5 @@ export const SidebarData = [
         id: 6,
         title: "Logout",
         icon: <ExitToAppIcon />,
-        link: "/dashboard",
     }
 ]

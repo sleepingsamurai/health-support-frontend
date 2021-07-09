@@ -4,6 +4,7 @@ import { SidebarData } from "./SidebarDate"
 import SidebarItem from "./SidebarItem"
 import user from "../images/user.jpg"
 import {useState, useEffect} from 'react'
+import {useCookies} from 'react-cookie'
 
 function Sidebar(){
     const sidebarItemComponent = SidebarData.map(
@@ -15,13 +16,14 @@ function Sidebar(){
     )
 
     const [username,setusername] = useState()
+    const [token, settoken] =useCookies(['mytoken'])
 
     useEffect(() => {
         fetch('http://127.0.0.1:8000/api/user/', {
             'method' : 'GET',
             headers : {
                 'Content-Type' : 'application/json',
-                'Authorization' : 'Token 3d12146fd1fcd94ccdd96f2b13ddcb3c4bbfb49f'
+                'Authorization' : `Token ${token['mytoken']}`
             }
         }).then(response => response.json())
         .then(response => setusername(response.username))

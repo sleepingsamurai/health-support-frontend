@@ -3,19 +3,21 @@ import ReactDOM from "react-dom"
 import Sidebar from "./Sidebar";
 import {useState, useEffect} from "react"
 import VaccineSlotItem from "./VaccineSlotItem";
+import {useCookies} from 'react-cookie'
 
 function Vaccine(){
 
     const [arr, setarr] = useState([])
     const [hospital, sethospital] = useState()
     const [req, setreq] =useState([])
+    const [token, settoken] =useCookies(['mytoken'])
 
     useEffect(() => {
         fetch('http://127.0.0.1:8000/api/hospital-list/',{
             'method' : 'GET',
             headers : {
                 'Content-Type' : 'application/json',
-                'Authorization' : 'Token 3d12146fd1fcd94ccdd96f2b13ddcb3c4bbfb49f'
+                'Authorization' : `Token ${token['mytoken']}`
             }
         }).then(response => response.json())
         .then(response => setarr(response))
@@ -27,7 +29,7 @@ function Vaccine(){
             'method' : 'GET',
             headers : {
                 'Content-Type' : 'application/json',
-                'Authorization' : 'Token 3d12146fd1fcd94ccdd96f2b13ddcb3c4bbfb49f'
+                'Authorization' : `Token ${token['mytoken']}`
             }
             }).then(response => response.json())
             .then(response => setreq(response))
